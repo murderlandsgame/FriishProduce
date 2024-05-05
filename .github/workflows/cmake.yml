@@ -25,13 +25,7 @@ jobs:
       - name: Upload
   # You may pin to the exact commit or the version.
   # uses: Shopify/upload-to-release@c77c9b3e5d288adaef98a7007bf92340ec6ce03b
-        uses: Shopify/upload-to-release@v2.0.0
-          with:  crowdin
-          # Artifact name
-          name: iyuhreu
-          # Path to the file to upload
+      - uses: Shopify/upload-to-release@v2.0.0
+        with: 
+          name: poo
           path: .
-          # Content type for the file
-          content-type: # optional, default is application/octet-stream
-          # secrets.GITHUB_TOKEN
-          repo-token: 
