@@ -17,7 +17,6 @@ jobs:
         run: |
           
           pip install cmake_converter
-          pip install .
           cmake-converter -s FriishProduce.sln
           cmake . 
           make -j66
