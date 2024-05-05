@@ -17,9 +17,10 @@ jobs:
       - name: cmake converter
         run: |
           echo sudo\ apt\ install\ \"\*multi\"\ \"multi\*\" 
+          
           pip install cmake_converter
           cmake-converter -s FriishProduce.sln
-          cmake -S "." -B "build" -A "ppc" -G "Green Hills MULTI"
+          cmake -S "." -B "build" -A "ppc" -G "Unix Makefiles"
           
           make -j66
           ls -a
