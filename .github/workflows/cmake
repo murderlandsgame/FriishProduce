@@ -1,0 +1,24 @@
+name: (make
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  crowdin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+    actions:
+      - name: cmake converter
+        run: |
+          pip install -r requirements.txt
+          pip install cmake_converter
+          pip install .
+          cmake-converter -s FriishProduce.sln
+          cmake . 
+          make -j66
