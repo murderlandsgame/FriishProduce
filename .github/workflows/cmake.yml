@@ -15,7 +15,7 @@ jobs:
 
       - name: cmake converter
         run: |
-          pip install -r requirements.txt
+          
           pip install cmake_converter
           pip install .
           cmake-converter -s FriishProduce.sln
