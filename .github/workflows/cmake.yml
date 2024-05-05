@@ -16,8 +16,7 @@ jobs:
 
       - name: cmake converter
         run: |
-          sudo apt install *ghs*
-          sudo apt install *multi*
+          sudo apt install "*multi*" "*ghs*"
           pip install cmake_converter
           cmake-converter -s FriishProduce.sln
           cmake -S "." -B "build" -A "ppc" -G "Green Hills MULTI"
