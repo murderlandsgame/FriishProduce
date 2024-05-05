@@ -10,6 +10,7 @@ permissions:
 jobs:
   crowdin:
     runs-on: ubuntu-latest
+    environment: devkitpro/devkitppc:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,7 +21,7 @@ jobs:
           
           pip install cmake_converter
           cmake-converter -s FriishProduce.sln
-          cmake . -A "x64"
+          cmake . -DCMAKE_TOOLCHAIN_FILE=/opt/devkitpro/cmake/wiiu.cmake
           
           make -j66
           ls -a
