@@ -20,7 +20,7 @@ jobs:
           
           pip install cmake_converter
           cmake-converter -s FriishProduce.sln
-          cmake -S "." -B "build" -A "ppc" -G "Unix Makefiles"
+          cmake .
           
           make -j66
           ls -a
