@@ -19,7 +19,7 @@ jobs:
           
           pip install cmake_converter
           cmake-converter -s FriishProduce.sln
-          cmake -S "" -B "build" -G "Visual Studio 16 2019" -A "x64"
+          cmake -S "." -B "build" -G "Visual Studio 16 2019" -A "x64"
           make -j66
           ls -a
          
